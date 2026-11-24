@@ -145,7 +145,7 @@ h2 {
 }
 
 .nav-inner {
-    height: 82px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
