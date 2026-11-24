@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#202a33">
 
-    <meta name="description" content="Explore steel furniture at GS Steel Furniture, Moga. Contact us for product details, availability and prices.">
+    <meta name="description" content="Explore the steel furniture collection at GS Steel Furniture, Moga.">
 
-    <title>Steel Furniture | GS Steel Furniture Moga</title>
+    <title>Steel Furniture Collection | GS Steel Furniture</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +17,185 @@
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Main Website CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Steel Furniture Page Styling -->
+    <style>
+
+        /* HERO SECTION */
+
+        .steel-hero {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(20, 30, 39, 0.90),
+                    rgba(20, 30, 39, 0.48)
+                ),
+                url("https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+
+        .steel-hero .hero-content {
+            max-width: 700px;
+            padding: 80px 0;
+        }
+
+        .steel-hero .eyebrow {
+            color: #ffffff;
+        }
+
+        .steel-hero h1 {
+            color: #ffffff;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.12;
+            margin: 20px 0;
+        }
+
+        .steel-hero h1 em {
+            color: #d6424b;
+            font-style: normal;
+        }
+
+        .steel-hero p {
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 560px;
+            line-height: 1.8;
+        }
+
+
+        /* PRODUCT SECTION */
+
+        .steel-products {
+            padding: 85px 0;
+            background: #f7f8fa;
+        }
+
+        .steel-products .section-head {
+            margin-bottom: 40px;
+        }
+
+        .steel-product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+
+        /* PRODUCT CARD */
+
+        .steel-product-card {
+            background: #ffffff;
+            border: 1px solid #e6e8eb;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .steel-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(25, 43, 58, 0.09);
+        }
+
+
+        /* BLANK PRODUCT IMAGE */
+
+        .steel-product-image {
+            width: 100%;
+            height: 245px;
+            background: #e9edf0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #929ba3;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+
+        /* PRODUCT DETAILS */
+
+        .steel-product-info {
+            padding: 24px;
+        }
+
+        .steel-product-info h3 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            color: #202a33;
+            margin: 0 0 20px;
+        }
+
+        .steel-product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .steel-detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #edf0f2;
+            font-size: 14px;
+        }
+
+        .steel-detail-label {
+            color: #777f87;
+            font-weight: 600;
+        }
+
+        .steel-detail-value {
+            color: #202a33;
+            text-align: right;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .steel-product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 20px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .steel-hero {
+                min-height: 360px;
+                background-position: center;
+            }
+
+            .steel-hero .hero-content {
+                padding: 65px 0;
+            }
+
+            .steel-product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steel-product-image {
+                height: 230px;
+            }
+
+            .steel-products {
+                padding: 60px 0;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -54,7 +231,7 @@
                 <a href="index.html#contact">Contact</a>
             </nav>
 
-            <a class="btn btn-dark nav-cta" href="#contact">
+            <a class="btn btn-dark nav-cta" href="index.html#contact">
                 Get a Quote ↗
             </a>
 
@@ -66,43 +243,33 @@
     <main>
 
         <!-- STEEL FURNITURE HERO -->
-        <section class="hero" id="home">
+        <section class="steel-hero">
 
             <div class="container">
 
                 <div class="hero-content">
 
                     <div class="eyebrow">
-                        GS Steel Furniture · Moga
+                        GS STEEL FURNITURE · MOGA
                     </div>
 
                     <h1>
-                        Strong by design.<br>
-                        <em>Built for everyday use.</em>
+                        Steel Furniture<br>
+                        <em>Collection.</em>
                     </h1>
 
                     <p>
-                        Explore our steel furniture range at GS Steel Furniture.
-                        Discover practical furniture solutions for homes,
-                        businesses and different spaces.
+                        Explore our steel furniture range.
                     </p>
 
                     <div class="hero-actions">
 
-                        <a class="btn btn-dark" href="#products">
-                            Explore Steel Furniture →
-                        </a>
-
-                        <a class="btn btn-light" href="#contact">
-                            Enquire Now
+                        <a class="btn btn-light" href="#products">
+                            View Products ↓
                         </a>
 
                     </div>
 
-                    <div class="hero-note">
-                        Steel Furniture • Storage • Home & Commercial
-                    </div>
-
                 </div>
 
             </div>
@@ -110,97 +277,8 @@
         </section>
 
 
-        <!-- TRUST SECTION -->
-        <section class="trust-strip">
-
-            <div class="container trust-grid">
-
-                <div class="trust-item">
-                    <span class="trust-icon">✦</span>
-                    Practical Designs
-                </div>
-
-                <div class="trust-item">
-                    <span class="trust-icon">◇</span>
-                    Everyday Use
-                </div>
-
-                <div class="trust-item">
-                    <span class="trust-icon">⌂</span>
-                    Home & Commercial
-                </div>
-
-                <div class="trust-item">
-                    <span class="trust-icon">✓</span>
-                    Enquire for Details
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- INTRODUCTION -->
-        <section class="section">
-
-            <div class="container about-grid">
-
-                <div class="about-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=1100&q=85"
-                        alt="Steel furniture display"
-                    >
-
-                    <div class="image-stamp">
-                        GS STEEL FURNITURE · MOGA
-                    </div>
-
-                </div>
-
-
-                <div class="about-copy">
-
-                    <div class="eyebrow">
-                        Our Steel Furniture Range
-                    </div>
-
-                    <h2>
-                        Practical furniture for different spaces.
-                    </h2>
-
-                    <p>
-                        At GS Steel Furniture, we offer steel furniture
-                        solutions for a variety of requirements.
-                        Whether you are furnishing your home or workplace,
-                        our team can help you explore suitable options.
-                    </p>
-
-                    <p>
-                        Contact us to discuss available products,
-                        designs, sizes and pricing.
-                    </p>
-
-                    <ul class="about-list">
-                        <li>Steel furniture solutions</li>
-                        <li>Options for homes and businesses</li>
-                        <li>Different furniture requirements</li>
-                        <li>Contact us for product availability</li>
-                    </ul>
-
-                    <a class="btn btn-dark" href="#contact">
-                        Enquire About Steel Furniture ↗
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- STEEL FURNITURE PRODUCTS -->
-        <section class="section products-section" id="products">
+        <!-- SIX STEEL PRODUCTS -->
+        <section class="steel-products" id="products">
 
             <div class="container">
 
@@ -209,17 +287,15 @@
                     <div>
 
                         <div class="eyebrow">
-                            Explore Our Products
+                            GS Steel Furniture
                         </div>
 
                         <h2>
-                            Our steel furniture collection.
+                            Steel Furniture Products
                         </h2>
 
                         <p class="section-intro">
-                            Browse the furniture categories below.
-                            Contact us for product details, availability
-                            and pricing.
+                            Explore our product collection.
                         </p>
 
                     </div>
@@ -227,49 +303,41 @@
                 </div>
 
 
-                <div class="product-grid">
+                <div class="steel-product-grid">
 
 
                     <!-- PRODUCT 1 -->
-                    <article class="product-card">
+                    <article class="steel-product-card">
 
-                        <div class="product-image">
-
-                            <span class="tag">Storage</span>
-
-                            <img
-                                src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80"
-                                alt="Furniture storage"
-                            >
-
+                        <div class="steel-product-image">
+                            PRODUCT IMAGE
                         </div>
 
+                        <div class="steel-product-info">
 
-                        <div class="product-info">
+                            <h3>Product 1</h3>
 
-                            <h3>
-                                Steel Storage Furniture
-                            </h3>
+                            <div class="steel-product-details">
 
-                            <p>
-                                Storage furniture options for different
-                                home and workplace requirements.
-                            </p>
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Name</span>
+                                    <span class="steel-detail-value">Name 1</span>
+                                </div>
 
-                            <div class="product-bottom">
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Code</span>
+                                    <span class="steel-detail-value">Code 1</span>
+                                </div>
 
-                                <span class="price">
-                                    Enquire for price
-                                </span>
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Dimensions</span>
+                                    <span class="steel-detail-value">Dimensions 1</span>
+                                </div>
 
-                                <a
-                                    class="enquire"
-                                    href="https://wa.me/919814603300?text=Hello%2C%20I%20am%20interested%20in%20steel%20storage%20furniture."
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    Enquire ↗
-                                </a>
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Type</span>
+                                    <span class="steel-detail-value">Type 1</span>
+                                </div>
 
                             </div>
 
@@ -279,45 +347,37 @@
 
 
                     <!-- PRODUCT 2 -->
-                    <article class="product-card">
+                    <article class="steel-product-card">
 
-                        <div class="product-image">
-
-                            <span class="tag">Bedroom</span>
-
-                            <img
-                                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80"
-                                alt="Bedroom furniture"
-                            >
-
+                        <div class="steel-product-image">
+                            PRODUCT IMAGE
                         </div>
 
+                        <div class="steel-product-info">
 
-                        <div class="product-info">
+                            <h3>Product 2</h3>
 
-                            <h3>
-                                Steel Bedroom Furniture
-                            </h3>
+                            <div class="steel-product-details">
 
-                            <p>
-                                Explore furniture options for bedroom
-                                and home furnishing needs.
-                            </p>
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Name</span>
+                                    <span class="steel-detail-value">Name 2</span>
+                                </div>
 
-                            <div class="product-bottom">
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Code</span>
+                                    <span class="steel-detail-value">Code 2</span>
+                                </div>
 
-                                <span class="price">
-                                    Enquire for price
-                                </span>
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Dimensions</span>
+                                    <span class="steel-detail-value">Dimensions 2</span>
+                                </div>
 
-                                <a
-                                    class="enquire"
-                                    href="https://wa.me/919814603300?text=Hello%2C%20I%20am%20interested%20in%20steel%20bedroom%20furniture."
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    Enquire ↗
-                                </a>
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Type</span>
+                                    <span class="steel-detail-value">Type 2</span>
+                                </div>
 
                             </div>
 
@@ -327,45 +387,157 @@
 
 
                     <!-- PRODUCT 3 -->
-                    <article class="product-card">
+                    <article class="steel-product-card">
 
-                        <div class="product-image">
+                        <div class="steel-product-image">
+                            PRODUCT IMAGE
+                        </div>
 
-                            <span class="tag">Utility</span>
+                        <div class="steel-product-info">
 
-                            <img
-                                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
-                                alt="Furniture for workplaces"
-                            >
+                            <h3>Product 3</h3>
+
+                            <div class="steel-product-details">
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Name</span>
+                                    <span class="steel-detail-value">Name 3</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Code</span>
+                                    <span class="steel-detail-value">Code 3</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Dimensions</span>
+                                    <span class="steel-detail-value">Dimensions 3</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Type</span>
+                                    <span class="steel-detail-value">Type 3</span>
+                                </div>
+
+                            </div>
 
                         </div>
 
+                    </article>
 
-                        <div class="product-info">
 
-                            <h3>
-                                Steel Utility Furniture
-                            </h3>
+                    <!-- PRODUCT 4 -->
+                    <article class="steel-product-card">
 
-                            <p>
-                                Practical furniture options for workplaces
-                                and everyday requirements.
-                            </p>
+                        <div class="steel-product-image">
+                            PRODUCT IMAGE
+                        </div>
 
-                            <div class="product-bottom">
+                        <div class="steel-product-info">
 
-                                <span class="price">
-                                    Enquire for price
-                                </span>
+                            <h3>Product 4</h3>
 
-                                <a
-                                    class="enquire"
-                                    href="https://wa.me/919814603300?text=Hello%2C%20I%20am%20interested%20in%20steel%20utility%20furniture."
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    Enquire ↗
-                                </a>
+                            <div class="steel-product-details">
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Name</span>
+                                    <span class="steel-detail-value">Name 4</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Code</span>
+                                    <span class="steel-detail-value">Code 4</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Dimensions</span>
+                                    <span class="steel-detail-value">Dimensions 4</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Type</span>
+                                    <span class="steel-detail-value">Type 4</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 5 -->
+                    <article class="steel-product-card">
+
+                        <div class="steel-product-image">
+                            PRODUCT IMAGE
+                        </div>
+
+                        <div class="steel-product-info">
+
+                            <h3>Product 5</h3>
+
+                            <div class="steel-product-details">
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Name</span>
+                                    <span class="steel-detail-value">Name 5</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Code</span>
+                                    <span class="steel-detail-value">Code 5</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Dimensions</span>
+                                    <span class="steel-detail-value">Dimensions 5</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Type</span>
+                                    <span class="steel-detail-value">Type 5</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 6 -->
+                    <article class="steel-product-card">
+
+                        <div class="steel-product-image">
+                            PRODUCT IMAGE
+                        </div>
+
+                        <div class="steel-product-info">
+
+                            <h3>Product 6</h3>
+
+                            <div class="steel-product-details">
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Name</span>
+                                    <span class="steel-detail-value">Name 6</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Product Code</span>
+                                    <span class="steel-detail-value">Code 6</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Dimensions</span>
+                                    <span class="steel-detail-value">Dimensions 6</span>
+                                </div>
+
+                                <div class="steel-detail-row">
+                                    <span class="steel-detail-label">Type</span>
+                                    <span class="steel-detail-value">Type 6</span>
+                                </div>
 
                             </div>
 
@@ -375,254 +547,6 @@
 
 
                 </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FEATURE BAND -->
-        <section class="feature-band">
-
-            <div class="feature-image"></div>
-
-            <div class="feature-copy">
-
-                <div class="eyebrow">
-                    Why GS Steel Furniture
-                </div>
-
-                <h2>
-                    Furniture solutions for everyday needs.
-                </h2>
-
-                <p>
-                    Visit or contact GS Steel Furniture in Moga
-                    to discuss your furniture requirements.
-                    Our team can help you explore available options.
-                </p>
-
-                <div class="feature-points">
-
-                    <div class="feature-point">
-                        <strong>Furniture Range</strong>
-                        <span>Options for different requirements</span>
-                    </div>
-
-                    <div class="feature-point">
-                        <strong>Home & Commercial</strong>
-                        <span>Furniture for different spaces</span>
-                    </div>
-
-                    <div class="feature-point">
-                        <strong>Product Enquiries</strong>
-                        <span>Ask about available designs and sizes</span>
-                    </div>
-
-                    <div class="feature-point">
-                        <strong>Local Store</strong>
-                        <span>Based in Moga, Punjab</span>
-                    </div>
-
-                </div>
-
-                <a class="btn btn-light" href="#contact">
-                    Contact Our Team ↗
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-        <section class="section contact" id="contact">
-
-            <div class="container contact-grid">
-
-                <div>
-
-                    <div class="eyebrow">
-                        Interested in Steel Furniture?
-                    </div>
-
-                    <h2>
-                        Let's discuss your requirements.
-                    </h2>
-
-                    <p class="section-intro">
-                        Contact GS Steel Furniture for product information,
-                        availability and pricing.
-                    </p>
-
-
-                    <div class="contact-details">
-
-
-                        <div class="contact-row">
-
-                            <span class="trust-icon">⌖</span>
-
-                            <div>
-                                <b>Find Our Store</b>
-
-                                <span>
-                                    Near Char Khambe, Akalsar Road,
-                                    Moga – 142001, Punjab, India
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <div class="contact-row">
-
-                            <span class="trust-icon">☎</span>
-
-                            <div>
-                                <b>Call Us</b>
-
-                                <span>
-                                    <a href="tel:+919814603300">
-                                        +91 98146 03300
-                                    </a>
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <div class="contact-row">
-
-                            <span class="trust-icon">✉</span>
-
-                            <div>
-                                <b>Email</b>
-
-                                <span>
-                                    <a href="mailto:gsfurnituremoga@gmail.com">
-                                        gsfurnituremoga@gmail.com
-                                    </a>
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <div class="contact-row">
-
-                            <span class="trust-icon">◎</span>
-
-                            <div>
-                                <b>Instagram</b>
-
-                                <span>
-                                    <a
-                                        href="https://www.instagram.com/gssteelfurnituremoga/"
-                                        target="_blank"
-                                        rel="noopener"
-                                    >
-                                        @GSSTEELFURNITUREMOGA
-                                    </a>
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-                <!-- ENQUIRY FORM -->
-                <form class="contact-form" id="enquiryForm">
-
-                    <h3>
-                        Enquire About Steel Furniture
-                    </h3>
-
-                    <p class="form-description">
-                        Send us your requirements through WhatsApp.
-                    </p>
-
-
-                    <div class="field">
-
-                        <label for="name">
-                            Your Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Full name"
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="field">
-
-                        <label for="phone">
-                            Phone Number
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="+91 ..."
-                            required
-                        >
-
-                    </div>
-
-
-                    <div class="field">
-
-                        <label for="interest">
-                            I'm Interested In
-                        </label>
-
-                        <select id="interest" name="interest">
-
-                            <option>Steel Storage Furniture</option>
-                            <option>Steel Bedroom Furniture</option>
-                            <option>Steel Utility Furniture</option>
-                            <option>Other Steel Furniture</option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="field">
-
-                        <label for="message">
-                            Your Message
-                        </label>
-
-                        <textarea
-                            id="message"
-                            name="message"
-                            placeholder="Tell us what you need..."
-                        ></textarea>
-
-                    </div>
-
-
-                    <button class="btn btn-dark" type="submit">
-                        Send Enquiry via WhatsApp ↗
-                    </button>
-
-                    <p class="form-message" id="formMessage">
-                        Opening WhatsApp...
-                    </p>
-
-                </form>
 
             </div>
 
@@ -637,7 +561,6 @@
         <div class="container">
 
             <div class="footer-grid">
-
 
                 <div>
 
@@ -658,12 +581,10 @@
                     <h4>Explore</h4>
 
                     <div class="footer-links">
-
                         <a href="index.html#home">Home</a>
                         <a href="index.html#collections">Furniture Range</a>
                         <a href="index.html#about">About Us</a>
                         <a href="index.html#contact">Contact</a>
-
                     </div>
 
                 </div>
@@ -674,12 +595,10 @@
                     <h4>Collections</h4>
 
                     <div class="footer-links">
-
                         <a href="steelFurniture.html">Steel Furniture</a>
                         <a href="parlourFurniture.html">Parlour Furniture</a>
                         <a href="schoolFurniture.html">School Furniture</a>
                         <a href="officeFurniture.html">Office Furniture</a>
-
                     </div>
 
                 </div>
@@ -715,7 +634,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -727,7 +645,7 @@
                 </span>
 
                 <span>
-                    Steel • Parlour • School • Office Furniture
+                    Steel Furniture Collection
                 </span>
 
             </div>
