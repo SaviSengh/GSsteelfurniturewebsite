@@ -167,8 +167,8 @@ h2 {
 
 .logo img {
     display: block;
-    width: 105px;
-    height: 95px;
+    width: 125px;
+    height: 105px;
     object-fit: contain;
     flex-shrink: 0;
 }
