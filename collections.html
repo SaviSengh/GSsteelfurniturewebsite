@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore steel, wooden, parlour, school, office and home furniture at GS Steel Furniture, Moga.">
+
+    <title>Our Collections | GS Steel Furniture</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .collection-hero {
+            background: #202a33;
+            color: white;
+            padding: 85px 0;
+            text-align: center;
+        }
+
+        .collection-hero .eyebrow {
+            color: #e36b72;
+        }
+
+        .collection-hero h1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(36px, 5vw, 58px);
+            margin: 15px 0;
+        }
+
+        .collection-hero p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+            color: #e1e5e8;
+        }
+
+        .collection-page {
+            padding-top: 65px;
+            padding-bottom: 75px;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .collection-item {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            overflow: hidden;
+            scroll-margin-top: 120px;
+            box-shadow: 0 5px 20px rgba(25, 43, 58, .06);
+        }
+
+        .collection-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .collection-content {
+            padding: 25px;
+        }
+
+        .collection-content h2 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .collection-content p {
+            line-height: 1.7;
+            color: #68737d;
+            margin-bottom: 20px;
+        }
+
+        .collection-actions {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .collection-actions a {
+            text-decoration: none;
+        }
+
+        .collection-enquiry {
+            background: #d6424b;
+            color: white;
+            padding: 12px 19px;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .collection-enquiry:hover {
+            background: #b92e38;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .collection-cta {
+            background: #f4f6f7;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .collection-cta h2 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .collection-cta p {
+            color: #68737d;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 700px) {
+            .collection-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .collection-item img {
+                height: 230px;
+            }
+
+            .collection-hero {
+                padding: 65px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container">
+            <span>MANUFACTURER & DISTRIBUTOR OF QUALITY FURNITURE</span>
+            <span>Call us: +91 98146 03300</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <a href="index.html" class="logo">
+                <img src="images/GSlogoMAIN.png" alt="GS Steel Furniture">
+            </a>
+
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="index.html#featured">Products</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <a class="btn btn-dark nav-cta" href="index.html#contact">
+                Get a Quote ↗
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PAGE INTRO -->
+        <section class="collection-hero">
+            <div class="container">
+
+                <div class="eyebrow">GS Steel Furniture · Moga</div>
+
+                <h1>Explore Our Collections</h1>
+
+                <p>
+                    Discover furniture for every setting.
+                    From steel and wooden furniture to parlour,
+                    school and office solutions, explore our range
+                    and contact us about your requirements.
+                </p>
+
+                <a class="back-home" href="index.html">
+                    ← Back to Homepage
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ALL COLLECTIONS -->
+        <section class="section collection-page">
+            <div class="container">
+
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">Browse Our Furniture</div>
+                        <h2>Find what you're looking for.</h2>
+                        <p class="section-intro">
+                            Select a category to explore our furniture range.
+                            Contact us for product availability, designs and pricing.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collection-grid">
+
+                    <!-- STEEL -->
+                    <article class="collection-item" id="steel">
+                        <img
+                            src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=1000&q=85"
+                            alt="Steel furniture"
+                            loading="lazy"
+                        >
+
+                        <div class="collection-content">
+                            <h2>Steel Furniture</h2>
+                            <p>
+                                Explore steel furniture options for homes,
+                                businesses and everyday requirements.
+                            </p>
+
+                            <div class="collection-actions">
+                                <a class="collection-enquiry" href="https://wa.me/919814603300?text=Hello%20GS%20Steel%20Furniture%2C%20I%20am%20interested%20in%20steel%20furniture.">
+                                    Enquire on WhatsApp ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- WOODEN -->
+                    <article class="collection-item" id="wooden">
+                        <img
+                            src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&q=85"
+                            alt="Wooden furniture"
+                            loading="lazy"
+                        >
+
+                        <div class="collection-content">
+                            <h2>Wooden Furniture</h2>
+                            <p>
+                                Discover wooden furniture options for
+                                different rooms, homes and workspaces.
+                            </p>
+
+                            <div class="collection-actions">
+                                <a class="collection-enquiry" href="https://wa.me/919814603300?text=Hello%20GS%20Steel%20Furniture%2C%20I%20am%20interested%20in%20wooden%20furniture.">
+                                    Enquire on WhatsApp ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PARLOUR -->
+                    <article class="collection-item" id="parlour">
+                        <img
+                            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+                            alt="Parlour furniture inspiration"
+                            loading="lazy"
+                        >
+
+                        <div class="collection-content">
+                            <h2>Parlour Furniture</h2>
+                            <p>
+                                Furniture options for parlours and salon
+                                spaces. Contact us to discuss your setup.
+                            </p>
+
+                            <div class="collection-actions">
+                                <a class="collection-enquiry" href="https://wa.me/919814603300?text=Hello%20GS%20Steel%20Furniture%2C%20I%20am%20interested%20in%20parlour%20furniture.">
+                                    Enquire on WhatsApp ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- SCHOOL -->
+                    <article class="collection-item" id="school">
+                        <img
+                            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+                            alt="School and institutional furniture inspiration"
+                            loading="lazy"
+                        >
+
+                        <div class="collection-content">
+                            <h2>School Furniture</h2>
+                            <p>
+                                Furniture options for educational spaces.
+                                Get in touch to discuss your school's needs.
+                            </p>
+
+                            <div class="collection-actions">
+                                <a class="collection-enquiry" href="https://wa.me/919814603300?text=Hello%20GS%20Steel%20Furniture%2C%20I%20am%20interested%20in%20school%20furniture.">
+                                    Enquire on WhatsApp ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- OFFICE -->
+                    <article class="collection-item" id="office">
+                        <img
+                            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+                            alt="Office furniture"
+                            loading="lazy"
+                        >
+
+                        <div class="collection-content">
+                            <h2>Office Furniture</h2>
+                            <p>
+                                Explore furniture options for offices,
+                                workspaces and professional environments.
+                            </p>
+
+                            <div class="collection-actions">
+                                <a class="collection-enquiry" href="https://wa.me/919814603300?text=Hello%20GS%20Steel%20Furniture%2C%20I%20am%20interested%20in%20office%20furniture.">
+                                    Enquire on WhatsApp ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- HOME -->
+                    <article class="collection-item" id="home">
+                        <img
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+                            alt="Home furniture"
+                            loading="lazy"
+                        >
+
+                        <div class="collection-content">
+                            <h2>Home Furniture</h2>
+                            <p>
+                                Find furniture options for your home,
+                                with choices for different spaces and needs.
+                            </p>
+
+                            <div class="collection-actions">
+                                <a class="collection-enquiry" href="https://wa.me/919814603300?text=Hello%20GS%20Steel%20Furniture%2C%20I%20am%20interested%20in%20home%20furniture.">
+                                    Enquire on WhatsApp ↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT CTA -->
+        <section class="collection-cta">
+            <div class="container">
+
+                <h2>Looking for something specific?</h2>
+
+                <p>
+                    Contact GS Steel Furniture and tell us what
+                    type of furniture you need.
+                </p>
+
+                <a class="btn btn-dark" href="https://wa.me/919814603300?text=Hello%20GS%20Steel%20Furniture%2C%20I%20would%20like%20to%20make%20a%20furniture%20enquiry.">
+                    Chat With Us on WhatsApp ↗
+                </a>
+
+                <p style="margin-top:20px; margin-bottom:0;">
+                    Near Char Khambe, Akalsar Road, Moga – 142001, Punjab
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <a class="logo" href="index.html">
+                        <img src="images/GSlogoMAIN.png" alt="GS Steel Furniture">
+                    </a>
+
+                    <p class="footer-description">
+                        Manufacturer and distributor of steel, wooden,
+                        parlour, school and office furniture.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Explore</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="collections.html">Collections</a>
+                        <a href="index.html#about">About Us</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Collections</h4>
+                    <div class="footer-links">
+                        <a href="#steel">Steel Furniture</a>
+                        <a href="#wooden">Wooden Furniture</a>
+                        <a href="#parlour">Parlour Furniture</a>
+                        <a href="#school">School Furniture</a>
+                        <a href="#office">Office Furniture</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Get In Touch</h4>
+                    <div class="footer-links">
+                        <a href="tel:+919814603300">+91 98146 03300</a>
+                        <a href="mailto:gsfurnituremoga@gmail.com">gsfurnituremoga@gmail.com</a>
+                        <a href="https://www.instagram.com/gssteelfurnituremoga/" target="_blank" rel="noopener">
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    © <span id="year"></span> GS Steel Furniture. All rights reserved.
+                </span>
+
+                <span>
+                    Furniture for every space.
+                </span>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <a
+        class="whatsapp"
+        href="https://wa.me/919814603300"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with us on WhatsApp"
+    >
+        ◔
+    </a>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
