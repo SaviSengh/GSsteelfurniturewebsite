@@ -107,6 +107,5 @@ Message: ${message || "Please contact me with more details."}
 
     // Open WhatsApp
 
-    window.open(whatsappURL, "_blank", "noopener");
-
+    window.location.href = whatsappURL;
 });
