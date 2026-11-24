@@ -2,17 +2,19 @@
 /* ========================================
    GS STEEL FURNITURE
    Main Website Stylesheet
+   Red, Blue, White Brand Theme
 ======================================== */
 
 :root {
-    --ink: #171a1c;
-    --muted: #6f7477;
-    --paper: #f5f4f1;
-    --white: #fff;
-    --line: #e4e2dd;
-    --accent: #b78a57;
-    --dark: #202426;
-    --radius: 18px;
+    --ink: #25282b;
+    --muted: #626b73;
+    --paper: #f7f9fb;
+    --white: #ffffff;
+    --line: #e2e7ec;
+    --accent: #d6424b;
+    --blue: #238bc5;
+    --dark: #202a33;
+    --radius: 12px;
     --max: 1200px;
 }
 
@@ -55,18 +57,19 @@ h1, h2, h3 {
 
 h2 {
     font-size: clamp(2rem, 4vw, 3.35rem);
-    letter-spacing: -.045em;
+    letter-spacing: -.035em;
     margin-bottom: 16px;
+    color: var(--ink);
 }
 
 /* GENERAL */
 
 .eyebrow {
     text-transform: uppercase;
-    letter-spacing: .19em;
+    letter-spacing: .12em;
     font-size: .72rem;
     font-weight: 700;
-    color: var(--accent);
+    color: var(--blue);
 }
 
 .section {
@@ -86,37 +89,39 @@ h2 {
     gap: 10px;
     padding: 14px 22px;
     border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: 700;
     transition: .25s;
     cursor: pointer;
 }
 
 .btn-dark {
-    background: var(--ink);
+    background: var(--accent);
     color: white;
+    border-color: var(--accent);
 }
 
 .btn-dark:hover {
-    background: var(--accent);
+    background: #b92f39;
+    border-color: #b92f39;
     transform: translateY(-2px);
 }
 
 .btn-light {
-    border-color: #ffffff80;
+    border-color: #ffffffb8;
     color: white;
 }
 
 .btn-light:hover {
     background: white;
-    color: var(--ink);
+    color: var(--accent);
 }
 
 /* TOP BAR */
 
 .topbar {
-    background: #111416;
-    color: #c7c9c8;
+    background: var(--dark);
+    color: #edf2f6;
     font-size: .76rem;
     padding: 9px 0;
 }
@@ -133,26 +138,43 @@ h2 {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: #f5f4f1ed;
+    background: rgba(255, 255, 255, .97);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid #0000000b;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 3px 16px rgba(25, 43, 58, .045);
 }
 
 .nav-inner {
     height: 82px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 24px;
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: auto;
+    color: var(--accent);
     font: 800 1.35rem Manrope, sans-serif;
-    letter-spacing: .08em;
+    letter-spacing: .035em;
+    line-height: 1.1;
+}
+
+/* LOGO IMAGE */
+
+.logo img {
+    display: block;
+    width: 66px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .logo span {
-    color: var(--accent);
+    color: var(--blue);
 }
 
 .nav-links {
@@ -174,6 +196,7 @@ h2 {
 .nav-cta {
     font-size: .85rem;
     padding: 11px 17px;
+    margin-left: 8px;
 }
 
 .menu-toggle {
@@ -192,9 +215,9 @@ h2 {
     background:
         linear-gradient(
             90deg,
-            rgba(12,15,16,.88) 0%,
-            rgba(12,15,16,.62) 46%,
-            rgba(12,15,16,.1) 100%
+            rgba(20,31,40,.88) 0%,
+            rgba(20,31,40,.66) 48%,
+            rgba(20,31,40,.16) 100%
         ),
         url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2000&q=85")
         center/cover;
@@ -210,6 +233,7 @@ h2 {
 }
 
 .hero h1 {
+    color: white;
     font-size: clamp(3.1rem, 7vw, 6.3rem);
     letter-spacing: -.065em;
     margin: 20px 0 22px;
@@ -217,7 +241,7 @@ h2 {
 
 .hero h1 em {
     font-style: normal;
-    color: #d5b58e;
+    color: #79c5ed;
 }
 
 .hero p {
@@ -252,7 +276,7 @@ h2 {
 /* TRUST SECTION */
 
 .trust-strip {
-    background: #fff;
+    background: white;
     border-bottom: 1px solid var(--line);
 }
 
@@ -314,7 +338,7 @@ h2 {
     position: relative;
     min-height: 300px;
     overflow: hidden;
-    border-radius: var(--radius);
+    border-radius: 10px;
     background: #ddd;
     color: white;
 }
@@ -333,7 +357,11 @@ h2 {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, #111c 0%, transparent 70%);
+    background: linear-gradient(
+        0deg,
+        rgba(20,31,40,.86) 0%,
+        rgba(20,31,40,.04) 75%
+    );
 }
 
 .category-card:hover img {
@@ -349,6 +377,7 @@ h2 {
 }
 
 .category-copy h3 {
+    color: white;
     font-size: 1.55rem;
     margin-bottom: 5px;
 }
@@ -362,7 +391,7 @@ h2 {
 /* PRODUCTS */
 
 .products-section {
-    background: #fff;
+    background: white;
 }
 
 .product-grid {
@@ -372,21 +401,22 @@ h2 {
 }
 
 .product-card {
-    border: 1px solid var(--line);
-    border-radius: 14px;
+    border: 1px solid #e1e7ec;
+    border-radius: 10px;
     overflow: hidden;
     background: white;
     transition: .25s;
+    box-shadow: 0 5px 18px rgba(25,43,58,.035);
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 18px 45px #171a1c12;
+    box-shadow: 0 15px 35px rgba(25,43,58,.11);
 }
 
 .product-image {
     height: 270px;
-    background: #efeeeb;
+    background: #f0f3f5;
     position: relative;
     overflow: hidden;
 }
@@ -406,12 +436,13 @@ h2 {
     position: absolute;
     top: 15px;
     left: 15px;
-    background: #fff;
+    background: white;
+    color: var(--accent);
     padding: 6px 10px;
-    border-radius: 2px;
+    border-radius: 4px;
     font-size: .68rem;
     font-weight: 800;
-    letter-spacing: .08em;
+    letter-spacing: .045em;
     text-transform: uppercase;
 }
 
@@ -445,8 +476,8 @@ h2 {
 .enquire {
     font-size: .8rem;
     font-weight: 700;
-    color: #916a3f;
-    border-bottom: 1px solid #c6a47c;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
 }
 
 /* FEATURE SECTION */
@@ -475,6 +506,7 @@ h2 {
 
 .feature-copy h2 {
     max-width: 520px;
+    color: white;
 }
 
 .feature-copy p {
@@ -533,6 +565,7 @@ h2 {
     padding: 20px 23px;
     font: 700 .9rem Manrope;
     max-width: 160px;
+    border-radius: 6px;
 }
 
 .about-copy p {
@@ -553,7 +586,7 @@ h2 {
 
 .about-list li:before {
     content: "✓";
-    color: var(--accent);
+    color: var(--blue);
     font-weight: 800;
     margin-right: 12px;
 }
@@ -561,7 +594,7 @@ h2 {
 /* STATS */
 
 .stats {
-    background: #eae8e2;
+    background: #edf3f7;
     padding: 48px 0;
 }
 
@@ -573,7 +606,7 @@ h2 {
 
 .stat {
     text-align: center;
-    border-right: 1px solid #d3d0c8;
+    border-right: 1px solid #d6e0e7;
 }
 
 .stat:last-child {
@@ -614,7 +647,7 @@ h2 {
 /* TESTIMONIALS */
 
 .testimonials {
-    background: #fff;
+    background: white;
 }
 
 .quote-grid {
@@ -626,7 +659,8 @@ h2 {
 .quote {
     padding: 30px;
     border: 1px solid var(--line);
-    border-radius: 14px;
+    border-radius: 10px;
+    background: white;
 }
 
 .stars {
@@ -653,7 +687,7 @@ h2 {
 /* CONTACT */
 
 .contact {
-    background: #eae8e2;
+    background: #edf3f7;
 }
 
 .contact-grid {
@@ -684,10 +718,11 @@ h2 {
 }
 
 .contact-form {
-    background: #fff;
+    background: white;
     padding: 35px;
     border-radius: var(--radius);
-    box-shadow: 0 15px 45px #171a1c0a;
+    border: 1px solid #e2e7ec;
+    box-shadow: 0 12px 35px rgba(25,43,58,.07);
 }
 
 .contact-form h3 {
@@ -722,7 +757,7 @@ h2 {
 .field textarea {
     width: 100%;
     border: 1px solid var(--line);
-    background: #fafaf9;
+    background: #fafafa;
     padding: 13px 14px;
     border-radius: 5px;
     font: inherit;
@@ -733,7 +768,8 @@ h2 {
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-    border-color: var(--accent);
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(35,139,197,.11);
 }
 
 .field textarea {
@@ -755,7 +791,7 @@ h2 {
 /* FOOTER */
 
 .footer {
-    background: #15191b;
+    background: var(--dark);
     color: white;
     padding: 65px 0 25px;
 }
@@ -789,7 +825,7 @@ h2 {
 }
 
 .footer a:hover {
-    color: #d5b58e;
+    color: #79c5ed;
 }
 
 .footer-bottom {
@@ -872,6 +908,17 @@ h2 {
 
     .nav-inner {
         height: 70px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-right: auto;
+        font-size: 1.15rem;
+    }
+
+    .logo img {
+        width: 54px;
+        height: 50px;
     }
 
     .menu-toggle {
@@ -888,11 +935,12 @@ h2 {
         top: 70px;
         left: 0;
         right: 0;
-        background: var(--paper);
+        background: white;
         padding: 20px 25px 25px;
         flex-direction: column;
         align-items: flex-start;
         border-bottom: 1px solid var(--line);
+        box-shadow: 0 12px 20px rgba(25,43,58,.08);
     }
 
     .nav-links.open {
@@ -1039,3 +1087,4 @@ h2 {
         grid-column: auto;
     }
 }
+
