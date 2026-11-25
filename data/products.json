@@ -3,5 +3,11 @@
     "name": "test 1",
     "category": "steel",
     "featured": false
+  },
+  {
+    "name": "test 2",
+    "category": "steel",
+    "image": "/images/gslogomain.png",
+    "featured": false
   }
 ]
