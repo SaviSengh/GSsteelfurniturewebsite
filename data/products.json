@@ -1,13 +1,11 @@
 [
   {
-    "name": "test 1",
+    "name": "Table 1",
     "category": "steel",
-    "featured": false
-  },
-  {
-    "name": "test 2",
-    "category": "steel",
-    "description": "test",
+    "code": "TEST-01",
+    "dimensions": "1x2x3",
+    "type": "furniture",
+    "description": "testing",
     "featured": false
   }
 ]
