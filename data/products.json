@@ -8,6 +8,7 @@
     "name": "test 2",
     "category": "steel",
     "image": "/images/gslogomain.png",
+    "description": "test",
     "featured": false
   }
 ]
