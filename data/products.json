@@ -8,5 +8,12 @@
     "image": "/images/gslogomain.png",
     "description": "hello",
     "featured": false
+  },
+  {
+    "name": "test 2",
+    "category": "parlour",
+    "code": "1234",
+    "image": "/images/gslogomain-1.png",
+    "featured": false
   }
 ]
