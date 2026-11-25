@@ -12,5 +12,12 @@
     "code": "D-213",
     "image": "/images/school/D-213.png",
     "featured": false
+  },
+  {
+    "name": "School Chair (Blue 2)",
+    "category": "school",
+    "code": "D-214",
+    "image": "/images/school/D-214.png",
+    "featured": false
   }
 ]
