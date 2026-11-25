@@ -14,7 +14,6 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Main CSS -->
@@ -96,6 +95,8 @@
             border: 1px solid #e6e8eb;
             border-radius: 12px;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
@@ -105,11 +106,14 @@
         }
 
 
-        /* BLANK PRODUCT IMAGE */
+        /* PRODUCT IMAGE */
 
         .steel-product-image {
             width: 100%;
             height: 245px;
+            overflow: hidden;
+            position: relative;
+            flex-shrink: 0;
             background: #e9edf0;
             display: flex;
             align-items: center;
@@ -119,11 +123,20 @@
             letter-spacing: 1px;
         }
 
+        .steel-product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
 
         /* PRODUCT DETAILS */
 
         .steel-product-info {
             padding: 24px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .steel-product-info h3 {
@@ -156,6 +169,24 @@
         .steel-detail-value {
             color: #202a33;
             text-align: right;
+        }
+
+        .no-products-message {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #777f87;
+            padding: 35px 20px;
+            font-size: 16px;
+        }
+
+        .product-featured-label {
+            display: inline-block;
+            color: #d6424b;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
         }
 
 
@@ -277,7 +308,7 @@
         </section>
 
 
-        <!-- SIX STEEL PRODUCTS -->
+        <!-- STEEL FURNITURE PRODUCTS -->
         <section class="steel-products" id="products">
 
             <div class="container">
@@ -302,251 +333,8 @@
 
                 </div>
 
-
-                <div class="steel-product-grid">
-
-
-                    <!-- PRODUCT 1 -->
-                    <article class="steel-product-card">
-
-                        <div class="steel-product-image">
-                            PRODUCT IMAGE
-                        </div>
-
-                        <div class="steel-product-info">
-
-                            <h3>Product 1</h3>
-
-                            <div class="steel-product-details">
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Name</span>
-                                    <span class="steel-detail-value">Name 1</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Code</span>
-                                    <span class="steel-detail-value">Code 1</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Dimensions</span>
-                                    <span class="steel-detail-value">Dimensions 1</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Type</span>
-                                    <span class="steel-detail-value">Type 1</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCT 2 -->
-                    <article class="steel-product-card">
-
-                        <div class="steel-product-image">
-                            PRODUCT IMAGE
-                        </div>
-
-                        <div class="steel-product-info">
-
-                            <h3>Product 2</h3>
-
-                            <div class="steel-product-details">
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Name</span>
-                                    <span class="steel-detail-value">Name 2</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Code</span>
-                                    <span class="steel-detail-value">Code 2</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Dimensions</span>
-                                    <span class="steel-detail-value">Dimensions 2</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Type</span>
-                                    <span class="steel-detail-value">Type 2</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCT 3 -->
-                    <article class="steel-product-card">
-
-                        <div class="steel-product-image">
-                            PRODUCT IMAGE
-                        </div>
-
-                        <div class="steel-product-info">
-
-                            <h3>Product 3</h3>
-
-                            <div class="steel-product-details">
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Name</span>
-                                    <span class="steel-detail-value">Name 3</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Code</span>
-                                    <span class="steel-detail-value">Code 3</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Dimensions</span>
-                                    <span class="steel-detail-value">Dimensions 3</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Type</span>
-                                    <span class="steel-detail-value">Type 3</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCT 4 -->
-                    <article class="steel-product-card">
-
-                        <div class="steel-product-image">
-                            PRODUCT IMAGE
-                        </div>
-
-                        <div class="steel-product-info">
-
-                            <h3>Product 4</h3>
-
-                            <div class="steel-product-details">
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Name</span>
-                                    <span class="steel-detail-value">Name 4</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Code</span>
-                                    <span class="steel-detail-value">Code 4</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Dimensions</span>
-                                    <span class="steel-detail-value">Dimensions 4</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Type</span>
-                                    <span class="steel-detail-value">Type 4</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCT 5 -->
-                    <article class="steel-product-card">
-
-                        <div class="steel-product-image">
-                            PRODUCT IMAGE
-                        </div>
-
-                        <div class="steel-product-info">
-
-                            <h3>Product 5</h3>
-
-                            <div class="steel-product-details">
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Name</span>
-                                    <span class="steel-detail-value">Name 5</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Code</span>
-                                    <span class="steel-detail-value">Code 5</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Dimensions</span>
-                                    <span class="steel-detail-value">Dimensions 5</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Type</span>
-                                    <span class="steel-detail-value">Type 5</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCT 6 -->
-                    <article class="steel-product-card">
-
-                        <div class="steel-product-image">
-                            PRODUCT IMAGE
-                        </div>
-
-                        <div class="steel-product-info">
-
-                            <h3>Product 6</h3>
-
-                            <div class="steel-product-details">
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Name</span>
-                                    <span class="steel-detail-value">Name 6</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Product Code</span>
-                                    <span class="steel-detail-value">Code 6</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Dimensions</span>
-                                    <span class="steel-detail-value">Dimensions 6</span>
-                                </div>
-
-                                <div class="steel-detail-row">
-                                    <span class="steel-detail-label">Type</span>
-                                    <span class="steel-detail-value">Type 6</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
+                <!-- Products are loaded automatically from Pages CMS -->
+                <div class="steel-product-grid"></div>
 
             </div>
 
@@ -671,7 +459,7 @@
 
     <!-- CENTRAL PRODUCT DATA -->
     <script src="./products.js"></script>
-    
+
     <!-- LOAD STEEL FURNITURE PRODUCTS -->
     <script>
         GSProducts.renderProducts(
@@ -679,14 +467,9 @@
             ".steel-product-grid"
         );
     </script>
-    
+
     <!-- MAIN WEBSITE JAVASCRIPT -->
     <script src="./script.js"></script>
-    </body>
-    </html>
-
 
 </body>
-
 </html>
-
