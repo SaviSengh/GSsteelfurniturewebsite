@@ -4,107 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Office Furniture Collection | GS Steel Furniture</title>
+    <meta name="theme-color" content="#202a33">
+
     <meta name="description" content="Explore the office furniture collection at GS Steel Furniture, Moga, Punjab.">
 
+    <title>Office Furniture Collection | GS Steel Furniture</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="./style.css">
 
+    <!-- Office Page Styles -->
     <style>
+        /* OFFICE HERO */
+
         .office-hero {
             min-height: 360px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 60px 20px;
+            color: white;
             background:
-                linear-gradient(rgba(20, 30, 40, 0.65), rgba(20, 30, 40, 0.65)),
-                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=85");
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
+                linear-gradient(
+                    90deg,
+                    rgba(20, 31, 40, .82),
+                    rgba(20, 31, 40, .38)
+                ),
+                url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=85")
+                center/cover;
+        }
+
+        .office-hero-content {
+            width: min(1200px, calc(100% - 48px));
+            margin: auto;
+            padding: 75px 0;
         }
 
         .office-hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 12px;
+            color: white;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: -.045em;
+            margin: 15px 0;
         }
 
         .office-hero p {
-            font-size: 1.1rem;
-            max-width: 650px;
-            margin: 0 auto;
+            max-width: 550px;
+            color: #e5e5e5;
+            font-size: 1.05rem;
         }
+
+        .office-hero .eyebrow {
+            color: #79c5ed;
+        }
+
+        /* PRODUCT SECTION */
 
         .office-products {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 55px 20px 70px;
+            padding: 75px 0 90px;
         }
 
-        .office-products h2 {
-            text-align: center;
+        .office-products .container {
+            width: min(1200px, calc(100% - 48px));
+            margin: auto;
+        }
+
+        .office-products-heading {
             margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .office-products-heading h2 {
+            margin-bottom: 10px;
+        }
+
+        .office-products-heading p {
+            color: var(--muted);
         }
 
         .office-product-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 25px;
+            gap: 22px;
         }
 
         .office-product-card {
-            background: #ffffff;
-            border: 1px solid #e5e5e5;
+            background: white;
+            border: 1px solid var(--line);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 5px 18px rgba(25, 43, 58, .045);
+            transition: .25s;
+        }
+
+        .office-product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(25, 43, 58, .11);
         }
 
         .office-product-image {
-            height: 230px;
-            background: #eeeeee;
+            height: 270px;
+            background: #eef1f3;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #888888;
-            font-weight: 600;
-            letter-spacing: 1px;
+            color: #858b90;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .06em;
         }
 
         .office-product-info {
-            padding: 20px;
+            padding: 21px;
         }
 
         .office-product-info h3 {
+            font-size: 1.1rem;
             margin: 0 0 18px;
-            font-size: 1.2rem;
         }
 
         .office-product-details {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 11px;
         }
 
         .office-detail-row {
             display: flex;
             justify-content: space-between;
             gap: 12px;
-            border-bottom: 1px solid #eeeeee;
             padding-bottom: 9px;
-            font-size: 0.92rem;
+            border-bottom: 1px solid var(--line);
+            font-size: .86rem;
         }
 
         .office-detail-label {
-            font-weight: 600;
-            color: #333333;
+            font-weight: 700;
+            color: var(--ink);
         }
 
         .office-detail-value {
-            color: #777777;
+            color: var(--muted);
             text-align: right;
         }
+
+        /* RESPONSIVE */
 
         @media (max-width: 900px) {
             .office-product-grid {
@@ -112,13 +159,29 @@
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
+            .office-hero {
+                min-height: 300px;
+            }
+
+            .office-hero-content {
+                width: min(100% - 34px, 1200px);
+            }
+
+            .office-products .container {
+                width: min(100% - 34px, 1200px);
+            }
+
             .office-product-grid {
                 grid-template-columns: 1fr;
             }
 
-            .office-hero {
-                min-height: 280px;
+            .office-product-image {
+                height: 280px;
+            }
+
+            .office-products {
+                padding: 65px 0;
             }
         }
     </style>
@@ -126,211 +189,352 @@
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <a href="./index.html">
-                <img src="./images/GSlogoMAIN.png" alt="GS Steel Furniture Logo">
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container">
+            <span>MANUFACTURER & DISTRIBUTOR OF QUALITY FURNITURE</span>
+            <span>Call us: +91 98146 03300</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <a href="index.html#home" class="logo">
+                <img src="./images/GSlogoMAIN.png" alt="GS Steel Furniture">
             </a>
 
-            <div>
-                <a href="./index.html">Home</a>
-                <a href="./steelFurniture.html">Steel</a>
-                <a href="./parlourFurniture.html">Parlour</a>
-                <a href="./schoolFurniture.html">School</a>
-                <a href="./officeFurniture.html">Office</a>
-            </div>
-        </nav>
+            <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#collections">Furniture Range</a>
+                <a href="index.html#featured">Products</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <a class="btn btn-dark nav-cta" href="index.html#contact">
+                Get a Quote ↗
+            </a>
+
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="office-hero">
-        <div>
-            <h1>Office Furniture Collection</h1>
-            <p>Explore our range of office furniture designed for professional workspaces.</p>
-        </div>
-    </section>
+    <main>
 
-    <!-- Products Section -->
-    <main class="office-products">
-        <h2>Our Office Furniture</h2>
+        <!-- OFFICE HERO -->
+        <section class="office-hero">
+            <div class="office-hero-content">
 
-        <div class="office-product-grid">
+                <div class="eyebrow">GS Steel Furniture · Moga</div>
 
-            <!-- Product 1 -->
-            <article class="office-product-card">
-                <div class="office-product-image">PRODUCT IMAGE</div>
-                <div class="office-product-info">
-                    <h3>Product 1</h3>
-                    <div class="office-product-details">
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Name</span>
-                            <span class="office-detail-value">Name 1</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Code</span>
-                            <span class="office-detail-value">Code 1</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Dimensions</span>
-                            <span class="office-detail-value">Dimensions 1</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Type</span>
-                            <span class="office-detail-value">Type 1</span>
-                        </div>
-                    </div>
+                <h1>Office Furniture Collection</h1>
+
+                <p>
+                    Explore our range of office furniture designed
+                    for professional workspaces.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- OFFICE PRODUCTS -->
+        <section class="office-products">
+
+            <div class="container">
+
+                <div class="office-products-heading">
+                    <div class="eyebrow">Our Furniture Range</div>
+                    <h2>Our Office Furniture</h2>
+                    <p>Explore our office furniture collection.</p>
                 </div>
-            </article>
 
-            <!-- Product 2 -->
-            <article class="office-product-card">
-                <div class="office-product-image">PRODUCT IMAGE</div>
-                <div class="office-product-info">
-                    <h3>Product 2</h3>
-                    <div class="office-product-details">
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Name</span>
-                            <span class="office-detail-value">Name 2</span>
+                <div class="office-product-grid">
+
+                    <!-- PRODUCT 1 -->
+                    <article class="office-product-card">
+                        <div class="office-product-image">PRODUCT IMAGE</div>
+
+                        <div class="office-product-info">
+                            <h3>Product 1</h3>
+
+                            <div class="office-product-details">
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Name</span>
+                                    <span class="office-detail-value">Name 1</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Code</span>
+                                    <span class="office-detail-value">Code 1</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Dimensions</span>
+                                    <span class="office-detail-value">Dimensions 1</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Type</span>
+                                    <span class="office-detail-value">Type 1</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Code</span>
-                            <span class="office-detail-value">Code 2</span>
+                    </article>
+
+                    <!-- PRODUCT 2 -->
+                    <article class="office-product-card">
+                        <div class="office-product-image">PRODUCT IMAGE</div>
+
+                        <div class="office-product-info">
+                            <h3>Product 2</h3>
+
+                            <div class="office-product-details">
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Name</span>
+                                    <span class="office-detail-value">Name 2</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Code</span>
+                                    <span class="office-detail-value">Code 2</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Dimensions</span>
+                                    <span class="office-detail-value">Dimensions 2</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Type</span>
+                                    <span class="office-detail-value">Type 2</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Dimensions</span>
-                            <span class="office-detail-value">Dimensions 2</span>
+                    </article>
+
+                    <!-- PRODUCT 3 -->
+                    <article class="office-product-card">
+                        <div class="office-product-image">PRODUCT IMAGE</div>
+
+                        <div class="office-product-info">
+                            <h3>Product 3</h3>
+
+                            <div class="office-product-details">
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Name</span>
+                                    <span class="office-detail-value">Name 3</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Code</span>
+                                    <span class="office-detail-value">Code 3</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Dimensions</span>
+                                    <span class="office-detail-value">Dimensions 3</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Type</span>
+                                    <span class="office-detail-value">Type 3</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Type</span>
-                            <span class="office-detail-value">Type 2</span>
+                    </article>
+
+                    <!-- PRODUCT 4 -->
+                    <article class="office-product-card">
+                        <div class="office-product-image">PRODUCT IMAGE</div>
+
+                        <div class="office-product-info">
+                            <h3>Product 4</h3>
+
+                            <div class="office-product-details">
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Name</span>
+                                    <span class="office-detail-value">Name 4</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Code</span>
+                                    <span class="office-detail-value">Code 4</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Dimensions</span>
+                                    <span class="office-detail-value">Dimensions 4</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Type</span>
+                                    <span class="office-detail-value">Type 4</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </article>
+
+                    <!-- PRODUCT 5 -->
+                    <article class="office-product-card">
+                        <div class="office-product-image">PRODUCT IMAGE</div>
+
+                        <div class="office-product-info">
+                            <h3>Product 5</h3>
+
+                            <div class="office-product-details">
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Name</span>
+                                    <span class="office-detail-value">Name 5</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Code</span>
+                                    <span class="office-detail-value">Code 5</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Dimensions</span>
+                                    <span class="office-detail-value">Dimensions 5</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Type</span>
+                                    <span class="office-detail-value">Type 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PRODUCT 6 -->
+                    <article class="office-product-card">
+                        <div class="office-product-image">PRODUCT IMAGE</div>
+
+                        <div class="office-product-info">
+                            <h3>Product 6</h3>
+
+                            <div class="office-product-details">
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Name</span>
+                                    <span class="office-detail-value">Name 6</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Product Code</span>
+                                    <span class="office-detail-value">Code 6</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Dimensions</span>
+                                    <span class="office-detail-value">Dimensions 6</span>
+                                </div>
+
+                                <div class="office-detail-row">
+                                    <span class="office-detail-label">Type</span>
+                                    <span class="office-detail-value">Type 6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
-            </article>
+            </div>
+        </section>
 
-            <!-- Product 3 -->
-            <article class="office-product-card">
-                <div class="office-product-image">PRODUCT IMAGE</div>
-                <div class="office-product-info">
-                    <h3>Product 3</h3>
-                    <div class="office-product-details">
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Name</span>
-                            <span class="office-detail-value">Name 3</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Code</span>
-                            <span class="office-detail-value">Code 3</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Dimensions</span>
-                            <span class="office-detail-value">Dimensions 3</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Type</span>
-                            <span class="office-detail-value">Type 3</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product 4 -->
-            <article class="office-product-card">
-                <div class="office-product-image">PRODUCT IMAGE</div>
-                <div class="office-product-info">
-                    <h3>Product 4</h3>
-                    <div class="office-product-details">
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Name</span>
-                            <span class="office-detail-value">Name 4</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Code</span>
-                            <span class="office-detail-value">Code 4</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Dimensions</span>
-                            <span class="office-detail-value">Dimensions 4</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Type</span>
-                            <span class="office-detail-value">Type 4</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product 5 -->
-            <article class="office-product-card">
-                <div class="office-product-image">PRODUCT IMAGE</div>
-                <div class="office-product-info">
-                    <h3>Product 5</h3>
-                    <div class="office-product-details">
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Name</span>
-                            <span class="office-detail-value">Name 5</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Code</span>
-                            <span class="office-detail-value">Code 5</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Dimensions</span>
-                            <span class="office-detail-value">Dimensions 5</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Type</span>
-                            <span class="office-detail-value">Type 5</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Product 6 -->
-            <article class="office-product-card">
-                <div class="office-product-image">PRODUCT IMAGE</div>
-                <div class="office-product-info">
-                    <h3>Product 6</h3>
-                    <div class="office-product-details">
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Name</span>
-                            <span class="office-detail-value">Name 6</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Product Code</span>
-                            <span class="office-detail-value">Code 6</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Dimensions</span>
-                            <span class="office-detail-value">Dimensions 6</span>
-                        </div>
-                        <div class="office-detail-row">
-                            <span class="office-detail-label">Type</span>
-                            <span class="office-detail-value">Type 6</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-        </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 GS Steel Furniture. All Rights Reserved.</p>
-        <p>Moga, Punjab, India</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <a class="logo" href="index.html#home">
+                        <img src="./images/GSlogoMAIN.png" alt="GS Steel Furniture">
+                    </a>
+
+                    <p class="footer-description">
+                        Manufacturer & distributor of steel, wooden,
+                        parlour, school and office furniture.
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Explore</h4>
+
+                    <div class="footer-links">
+                        <a href="index.html#home">Home</a>
+                        <a href="index.html#collections">Furniture Range</a>
+                        <a href="index.html#featured">Products</a>
+                        <a href="index.html#about">About Us</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Collections</h4>
+
+                    <div class="footer-links">
+                        <a href="steelFurniture.html">Steel Furniture</a>
+                        <a href="parlourFurniture.html">Parlour Furniture</a>
+                        <a href="schoolFurniture.html">School Furniture</a>
+                        <a href="officeFurniture.html">Office Furniture</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Get In Touch</h4>
+
+                    <div class="footer-links">
+                        <a href="tel:+919814603300">+91 98146 03300</a>
+
+                        <a href="mailto:gsfurnituremoga@gmail.com">
+                            gsfurnituremoga@gmail.com
+                        </a>
+
+                        <a href="https://www.instagram.com/gssteelfurnituremoga/" target="_blank" rel="noopener">
+                            @GSSTEELFURNITUREMOGA
+                        </a>
+
+                        <a href="index.html#contact">Find Our Store</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>
+                    © <span id="year"></span>
+                    GS Steel Furniture. All rights reserved.
+                </span>
+
+                <span>
+                    Steel • Parlour • School • Office Furniture
+                </span>
+            </div>
+
+        </div>
     </footer>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919814603300"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Contact GS Steel Furniture on WhatsApp">
-        WhatsApp
+    <!-- WHATSAPP BUTTON -->
+    <a
+        class="whatsapp"
+        href="https://wa.me/919814603300"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with us on WhatsApp"
+    >
+        ◔
     </a>
 
+    <!-- JAVASCRIPT -->
     <script src="./script.js"></script>
+
 </body>
 </html>
 
