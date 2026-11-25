@@ -12,69 +12,78 @@ const whatsappNumber = "919814603300";
 // MOBILE NAVIGATION
 
 const menuButton = document.querySelector(".menu-toggle");
-
 const nav = document.querySelector(".nav-links");
 
+if (menuButton && nav) {
 
-menuButton.addEventListener("click", () => {
+    menuButton.addEventListener("click", () => {
 
-    const isOpen = nav.classList.toggle("open");
+        const isOpen = nav.classList.toggle("open");
 
-    menuButton.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-    );
+        menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
 
-    menuButton.textContent = isOpen ? "×" : "☰";
-
-});
-
-
-// CLOSE MENU AFTER CLICKING A LINK
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        nav.classList.remove("open");
-
-        menuButton.setAttribute("aria-expanded", "false");
-
-        menuButton.textContent = "☰";
+        menuButton.textContent = isOpen ? "×" : "☰";
 
     });
 
-});
+
+    // CLOSE MENU AFTER CLICKING A LINK
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            nav.classList.remove("open");
+
+            menuButton.setAttribute("aria-expanded", "false");
+
+            menuButton.textContent = "☰";
+
+        });
+
+    });
+
+}
 
 
 // AUTOMATIC COPYRIGHT YEAR
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+
+    yearElement.textContent = new Date().getFullYear();
+
+}
 
 
 // WHATSAPP ENQUIRY FORM
 
 const enquiryForm = document.getElementById("enquiryForm");
 
-enquiryForm.addEventListener("submit", (event) => {
+if (enquiryForm) {
 
-    event.preventDefault();
+    enquiryForm.addEventListener("submit", (event) => {
 
-    // Get form values
+        event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
+        // Get form values
 
-    const phone = document.getElementById("phone").value.trim();
+        const name = document.getElementById("name")?.value.trim() || "";
 
-    const interest = document.getElementById("interest").value;
+        const phone = document.getElementById("phone")?.value.trim() || "";
 
-    const message = document.getElementById("message").value.trim();
+        const interest = document.getElementById("interest")?.value || "";
+
+        const message = document.getElementById("message")?.value.trim() || "";
 
 
-    // Create WhatsApp message
+        // Create WhatsApp message
 
-    const whatsappMessage = `
+        const whatsappMessage = `
 Hello GS Steel Furniture!
 
 I would like to enquire about your furniture.
@@ -86,26 +95,34 @@ Phone: ${phone}
 Interested In: ${interest}
 
 Message: ${message || "Please contact me with more details."}
-    `;
+        `;
 
 
-    // Encode message for WhatsApp
+        // Encode message for WhatsApp
 
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-
-
-    // Create WhatsApp URL
-
-    const whatsappURL =
-        `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        const encodedMessage = encodeURIComponent(whatsappMessage);
 
 
-    // Display confirmation
+        // Create WhatsApp URL
 
-    document.getElementById("formMessage").style.display = "block";
+        const whatsappURL =
+            `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
 
-    // Open WhatsApp
+        // Display confirmation
 
-    window.location.href = whatsappURL;
-});
+        const formMessage = document.getElementById("formMessage");
+
+        if (formMessage) {
+            formMessage.style.display = "block";
+        }
+
+
+        // Open WhatsApp
+
+        window.location.href = whatsappURL;
+
+    });
+
+}
+
