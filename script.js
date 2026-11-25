@@ -4,12 +4,15 @@
    Main JavaScript File
 ======================================== */
 
+
 // WHATSAPP BUSINESS NUMBER
 
 const whatsappNumber = "919814603300";
 
 
+// ========================================
 // MOBILE NAVIGATION
+// ========================================
 
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav-links");
@@ -38,7 +41,10 @@ if (menuButton && nav) {
 
             nav.classList.remove("open");
 
-            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
             menuButton.textContent = "☰";
 
@@ -49,7 +55,9 @@ if (menuButton && nav) {
 }
 
 
+// ========================================
 // AUTOMATIC COPYRIGHT YEAR
+// ========================================
 
 const yearElement = document.getElementById("year");
 
@@ -60,7 +68,9 @@ if (yearElement) {
 }
 
 
+// ========================================
 // WHATSAPP ENQUIRY FORM
+// ========================================
 
 const enquiryForm = document.getElementById("enquiryForm");
 
@@ -70,18 +80,24 @@ if (enquiryForm) {
 
         event.preventDefault();
 
-        // Get form values
 
-        const name = document.getElementById("name")?.value.trim() || "";
+        // GET FORM VALUES
 
-        const phone = document.getElementById("phone")?.value.trim() || "";
+        const nameElement = document.getElementById("name");
+        const phoneElement = document.getElementById("phone");
+        const interestElement = document.getElementById("interest");
+        const messageElement = document.getElementById("message");
 
-        const interest = document.getElementById("interest")?.value || "";
+        const name = nameElement ? nameElement.value.trim() : "";
 
-        const message = document.getElementById("message")?.value.trim() || "";
+        const phone = phoneElement ? phoneElement.value.trim() : "";
+
+        const interest = interestElement ? interestElement.value : "";
+
+        const message = messageElement ? messageElement.value.trim() : "";
 
 
-        // Create WhatsApp message
+        // CREATE WHATSAPP MESSAGE
 
         const whatsappMessage = `
 Hello GS Steel Furniture!
@@ -98,31 +114,38 @@ Message: ${message || "Please contact me with more details."}
         `;
 
 
-        // Encode message for WhatsApp
+        // ENCODE MESSAGE
 
         const encodedMessage = encodeURIComponent(whatsappMessage);
 
 
-        // Create WhatsApp URL
+        // CREATE WHATSAPP URL
 
         const whatsappURL =
             `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
 
-        // Display confirmation
+        // DISPLAY CONFIRMATION
 
         const formMessage = document.getElementById("formMessage");
 
         if (formMessage) {
+
             formMessage.style.display = "block";
+
         }
 
 
-        // Open WhatsApp
+        // OPEN WHATSAPP
 
         window.location.href = whatsappURL;
 
     });
 
 }
+
+
+// ========================================
+// END OF MAIN JAVASCRIPT
+// ========================================
 
