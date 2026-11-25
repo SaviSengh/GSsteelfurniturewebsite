@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Table test 1",
+    "category": "steel",
+    "code": "TEST-01",
+    "dimensions": "2x2x2",
+    "type": "Table furniture",
+    "image": "/images/gslogomain.png",
+    "description": "hello",
+    "featured": false
+  }
+]
