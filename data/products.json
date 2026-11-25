@@ -5,6 +5,7 @@
     "code": "TEST-01",
     "dimensions": "1x2x3",
     "type": "furniture",
+    "image": "/images/gslogomain.png",
     "description": "testing",
     "featured": false
   }
