@@ -1,9 +1,16 @@
 [
   {
-    "name": "School Chair",
+    "name": "School Chair (Orange)",
     "category": "school",
     "code": "D-212",
     "image": "/images/school/D-212.png",
+    "featured": false
+  },
+  {
+    "name": "School Chair (Blue)",
+    "category": "school",
+    "code": "D-213",
+    "image": "/images/school/D-213.png",
     "featured": false
   }
 ]
