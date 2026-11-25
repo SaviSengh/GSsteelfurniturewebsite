@@ -1,4 +1,22 @@
 
+# ==========================================
+# GS STEEL FURNITURE - PAGES CMS
+# ==========================================
+
+# IMAGE STORAGE CONFIGURATION
+media:
+  - name: product_images
+    label: Product Images
+    input: images
+    output: /images
+    extensions:
+      - jpg
+      - jpeg
+      - png
+      - webp
+    rename: safe
+
+# PRODUCT MANAGEMENT
 content:
   - name: products
     label: Products
